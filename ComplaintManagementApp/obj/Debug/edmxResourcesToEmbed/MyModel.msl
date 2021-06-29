@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ComplaintDataBaseModelStoreContainer" CdmEntityContainer="ComplaintDataBaseEntities">
+    <EntitySetMapping Name="Complaint_tbl">
+      <EntityTypeMapping TypeName="ComplaintDataBaseModel.Complaint_tbl">
+        <MappingFragment StoreEntitySet="Complaint_tbl">
+          <ScalarProperty Name="ComplaintId" ColumnName="ComplaintId" />
+          <ScalarProperty Name="Complaint_Title" ColumnName="Complaint_Title" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdateOn" ColumnName="UpdateOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfo_tbl">
+      <EntityTypeMapping TypeName="ComplaintDataBaseModel.UserInfo_tbl">
+        <MappingFragment StoreEntitySet="UserInfo_tbl">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
