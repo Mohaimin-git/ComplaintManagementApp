@@ -1,38 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using ComplaintManagementApp;
 
 namespace ComplaintManagementApp.Controllers
 {
     public class AccountController : Controller
     {
-        private ComplaintDataBaseEntities db = new ComplaintDataBaseEntities();
-
         // GET: Account
         public ActionResult Index()
         {
-            return View(db.UserInfo_tbl.ToList());
+            return View();
         }
 
         // GET: Account/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserInfo_tbl userInfo_tbl = db.UserInfo_tbl.Find(id);
-            if (userInfo_tbl == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userInfo_tbl);
+            return View();
         }
 
         // GET: Account/Create
@@ -42,86 +27,63 @@ namespace ComplaintManagementApp.Controllers
         }
 
         // POST: Account/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserId,Name,Password,Email")] UserInfo_tbl userInfo_tbl)
+        public ActionResult Create(FormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.UserInfo_tbl.Add(userInfo_tbl);
-                db.SaveChanges();
+                // TODO: Add insert logic here
+
                 return RedirectToAction("Index");
             }
-
-            return View(userInfo_tbl);
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: Account/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserInfo_tbl userInfo_tbl = db.UserInfo_tbl.Find(id);
-            if (userInfo_tbl == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userInfo_tbl);
+            return View();
         }
 
         // POST: Account/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserId,Name,Password,Email")] UserInfo_tbl userInfo_tbl)
+        public ActionResult Edit(int id, FormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(userInfo_tbl).State = EntityState.Modified;
-                db.SaveChanges();
+                // TODO: Add update logic here
+
                 return RedirectToAction("Index");
             }
-            return View(userInfo_tbl);
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: Account/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserInfo_tbl userInfo_tbl = db.UserInfo_tbl.Find(id);
-            if (userInfo_tbl == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userInfo_tbl);
+            return View();
         }
 
         // POST: Account/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
         {
-            UserInfo_tbl userInfo_tbl = db.UserInfo_tbl.Find(id);
-            db.UserInfo_tbl.Remove(userInfo_tbl);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            try
             {
-                db.Dispose();
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
             }
-            base.Dispose(disposing);
+            catch
+            {
+                return View();
+            }
         }
     }
 }

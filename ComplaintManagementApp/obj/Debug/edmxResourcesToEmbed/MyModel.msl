@@ -13,13 +13,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="UserInfo_tbl">
-      <EntityTypeMapping TypeName="ComplaintDataBaseModel.UserInfo_tbl">
-        <MappingFragment StoreEntitySet="UserInfo_tbl">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
+    <EntitySetMapping Name="User_tbl">
+      <EntityTypeMapping TypeName="ComplaintDataBaseModel.User_tbl">
+        <MappingFragment StoreEntitySet="User_tbl">
+          <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

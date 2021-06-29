@@ -73,4 +73,3 @@ C:\Users\Admin\source\repos\ComplaintManagementApp\ComplaintManagementApp\obj\De
 C:\Users\Admin\source\repos\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.csproj.CopyComplete
 C:\Users\Admin\source\repos\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.dll
 C:\Users\Admin\source\repos\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.pdb
-C:\Users\Admin\source\repos\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.csproj.AssemblyReference.cache
