@@ -11,12 +11,10 @@ namespace ComplaintManagementApp
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class Complaint_tbl
     {
         public int ComplaintId { get; set; }
-        [Display(Name ="Complaint Title")]
         public string Complaint_Title { get; set; }
         public string Discription { get; set; }
         public System.DateTime Date { get; set; }

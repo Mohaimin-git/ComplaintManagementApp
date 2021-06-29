@@ -26,6 +26,6 @@ namespace ComplaintManagementApp
         }
     
         public virtual DbSet<Complaint_tbl> Complaint_tbl { get; set; }
-        public virtual DbSet<UserInfo_tbl> UserInfo_tbl { get; set; }
+        public virtual DbSet<User_tbl> User_tbl { get; set; }
     }
 }
