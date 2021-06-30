@@ -57,7 +57,7 @@ namespace ComplaintManagementApp.Controllers
             {
                 db.User_tbl.Add(user_tbl);
                 db.SaveChanges();
-                ViewBag.message="imhere ";
+                ViewBag.message="Signup Successful";
                 return View();   //put login page here
             }
 

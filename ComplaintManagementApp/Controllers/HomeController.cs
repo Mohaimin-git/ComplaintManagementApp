@@ -123,5 +123,9 @@ namespace ComplaintManagementApp.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult homepage()
+        {
+            return View();
+        }
     }
 }

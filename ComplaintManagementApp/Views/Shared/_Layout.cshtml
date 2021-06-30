@@ -18,15 +18,15 @@
 
         #sidebar {
             position: fixed;
-            width: 30%;
+            width: 15%;
             height: 100%;
-            left: -30%;
-            background-color: aquamarine;
+            left: -15%;
+            background-color: #3e3e3e;
         }
 
             #sidebar li {
-                color: slategray;
-                font-size: 30px;
+                color: #ffffff;
+                font-size: 20px;
                 padding: 30px;
                 border-bottom: 1px solid gray;
                 text-align: center;
@@ -53,7 +53,9 @@
     </style>
 </head>
 <body>
-    <h1 class="text-center">This is layout and navbar will be imported from here..!</h1>
+
+    <h1 class="text-center">Complaint Managment System</h1>
+    
     <div id="sidebar" onclick="togglemenue()">
         <div class="toggle-btn">
             <span></span>
@@ -67,11 +69,7 @@
 
         </ul>
     </div>
-
-
-    
-    <hr />
-    <div class="container body-content">
+    <div class="container body-content" style="width:65%; margin:0 auto">
         @RenderBody()
         <hr />
         <footer>

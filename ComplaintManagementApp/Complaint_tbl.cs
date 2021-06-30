@@ -11,14 +11,27 @@ namespace ComplaintManagementApp
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class Complaint_tbl
     {
         public int ComplaintId { get; set; }
+
+        [Required]
+        [Display(Name ="Title")]
         public string Complaint_Title { get; set; }
+
+        [Required]
         public string Discription { get; set; }
+
+        [Required]
         public System.DateTime Date { get; set; }
+
+        [Required]
         public string Status { get; set; }
+
+
+        [Display(Name = "Updated On")]
         public Nullable<System.DateTime> UpdateOn { get; set; }
     }
 }
