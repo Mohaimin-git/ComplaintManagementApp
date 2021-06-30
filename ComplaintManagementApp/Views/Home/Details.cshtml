@@ -4,60 +4,56 @@
     ViewBag.Title = "Details";
 }
 
-<hr />
-<br />
-<br />
-<div style="border:dotted thin #ff0000; margin:0 auto; width:60%">
-    <h2>All Complaints</h2>
+<h2>All Complaints</h2>
 
-    <div>
+<div>
 
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Complaint_Title)
-            </dt>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Complaint_Title)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Complaint_Title)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Complaint_Title)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Discription)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Discription)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Discription)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Discription)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Date)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Date)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Status)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Status)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.UpdateOn)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateOn)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.UpdateOn)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.UpdateOn)
+        </dd>
 
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ComplaintId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+    </dl>
 </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ComplaintId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+////ghc

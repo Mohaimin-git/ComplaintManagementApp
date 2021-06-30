@@ -98,6 +98,12 @@
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <None Include="jquery-1.10.2-vsdoc.js" />
+    <Content Include="jquery-1.10.2.js" />
+    <Content Include="jquery-1.10.2.min.js" />
+    <None Include="jquery.validate-vsdoc.js" />
+    <Content Include="jquery.validate.js" />
+    <Content Include="jquery.validate.min.js" />
     <Content Include="MyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MyModel.Context.cs</LastGenOutput>
@@ -149,6 +155,7 @@
     <Content Include="MyModel.edmx.diagram">
       <DependentUpon>MyModel.edmx</DependentUpon>
     </Content>
+    <Content Include="jquery-1.10.2.min.map" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

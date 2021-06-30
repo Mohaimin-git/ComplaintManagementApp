@@ -8,24 +8,25 @@
 //------------------------------------------------------------------------------
 
 namespace ComplaintManagementApp
+
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
-
     public partial class User_tbl
     {
         public int Id { get; set; }
 
-        [Required]
+        [DisplayName("Username Name")]
+        [Required(ErrorMessage = "This field is required")]
         public string Username { get; set; }
-
-        [Required]
         public string Email { get; set; }
-
-        [Required]
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "This field is required")]
         public string Password { get; set; }
-
         public string Role { get; set; }
+        public string LoginErrorMessage { set; get; }
     }
 }
+//m

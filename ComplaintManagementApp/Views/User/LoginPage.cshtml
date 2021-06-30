@@ -9,9 +9,84 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>LoginPage</title>
+    <style>
+        #login-div {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            border: 1px solid #0094ff;
+            padding: 10px 10px;
+        }
+
+        .field-validation-error {
+            color: red
+        }
+
+       
+    </style>
 </head>
 <body>
-    <div> 
+    <div id="login-div">
+        @using (Html.BeginForm("Authorize", "User", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td></td>
+                    <td style="text-decoration:underline">App Name</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Username)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Username)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.Username)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Password)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+                    </td>
+                </tr>
+
+                @*last column is for button*@
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="Loginname" value="Login Please" />
+                        <input type="submit" name="resetvalues" value=" Clear" />
+                    </td>
+                </tr>
+
+
+            </table>
+        }
     </div>
+    <script src="~/jquery-1.10.2.min.js"></script>
+    <script src="~/jquery.validate.min.js"></script>
+    <script src="~/jquery.validate.unobtrusive.min.js"></script>
+
 </body>
 </html>
+

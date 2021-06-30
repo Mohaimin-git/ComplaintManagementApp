@@ -144,7 +144,6 @@ C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\bi
 C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\bin\System.Web.Helpers.xml
 C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\bin\System.Web.Mvc.xml
 C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\ComplaintManagementApp\ComplaintManagementApp\obj\Debug\ComplaintManagementApp.dll

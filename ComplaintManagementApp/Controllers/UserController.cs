@@ -19,10 +19,37 @@ namespace ComplaintManagementApp.Controllers
         {
             return View(db.User_tbl.ToList());
         }
+
+        public ActionResult Index2()
+        {
+            return View();
+        }
+
         //to get login view
         public ActionResult LoginPage()
         {
-            return View(db.User_tbl.ToList());
+            return View();
+        }
+        //pass and name sent to this action
+        [HttpPost]
+        public ActionResult Authorize(ComplaintManagementApp.User_tbl userModel)
+        {
+            using (ComplaintDataBaseEntities db = new ComplaintDataBaseEntities())
+            {
+                var userDetails = db.User_tbl.Where(x => x.Username == userModel.Username && x.Password == userModel.Password).FirstOrDefault();
+                if (userDetails == null)
+                {
+                    userModel.LoginErrorMessage = "User name or password is incorrect";
+                    return View("LoginPage", userModel);
+                }
+                else
+
+                {
+                    Session["userId"] = userDetails.Id;  //POCHO
+                    return RedirectToAction(""); //DASHBOARD NAME 38:41
+                }
+            }
+
         }
 
         // GET: User/Details/5
@@ -57,7 +84,7 @@ namespace ComplaintManagementApp.Controllers
             {
                 db.User_tbl.Add(user_tbl);
                 db.SaveChanges();
-                ViewBag.message="Signup Successful";
+                ViewBag.message = "imhere ";
                 return View();   //put login page here
             }
 
