@@ -18,15 +18,21 @@ namespace ComplaintManagementApp
     {
         public int Id { get; set; }
 
-        [DisplayName("Username Name")]
+        
         [Required(ErrorMessage = "This field is required")]
         public string Username { get; set; }
+        [Required(ErrorMessage = "This field is required")]
         public string Email { get; set; }
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "This field is required")]
         public string Password { get; set; }
+
+        [Required(ErrorMessage = "This field is required")]
+        [DataType(DataType.Password)]
+        [Compare("Password",ErrorMessage ="Confirm Password didn't match")]
+        [Display(Name ="Confirm Password")]
+        public string CPassword { get; set; }
         public string Role { get; set; }
         public string LoginErrorMessage { set; get; }
     }
 }
-//m

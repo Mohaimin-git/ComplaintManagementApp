@@ -20,11 +20,6 @@ namespace ComplaintManagementApp.Controllers
             return View(db.User_tbl.ToList());
         }
 
-        public ActionResult Index2()
-        {
-            return View();
-        }
-
         //to get login view
         public ActionResult LoginPage()
         {
@@ -39,14 +34,23 @@ namespace ComplaintManagementApp.Controllers
                 var userDetails = db.User_tbl.Where(x => x.Username == userModel.Username && x.Password == userModel.Password).FirstOrDefault();
                 if (userDetails == null)
                 {
-                    userModel.LoginErrorMessage = "User name or password is incorrect";
+                    ViewBag.loginError = "Username or Password is incorrect";
                     return View("LoginPage", userModel);
                 }
                 else
 
                 {
                     Session["userId"] = userDetails.Id;  //POCHO
-                    return RedirectToAction(""); //DASHBOARD NAME 38:41
+                    if(userDetails.Role == "Admin")
+                    {
+                        return RedirectToAction("Index", "Home"); //DASHBOARD NAME 38:41
+
+                    }
+                    else
+                    {
+                        return RedirectToAction("homepage", "Home"); //DASHBOARD NAME 38:41
+
+                    }
                 }
             }
 
@@ -78,14 +82,13 @@ namespace ComplaintManagementApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Username,Email,Password,Role")] User_tbl user_tbl)
+        public ActionResult Create([Bind(Include = "Id,Username,Email,Password,CPassword,Role")] User_tbl user_tbl)
         {
             if (ModelState.IsValid)
-            {
+            {   
                 db.User_tbl.Add(user_tbl);
                 db.SaveChanges();
-                ViewBag.message = "imhere ";
-                return View();   //put login page here
+                return RedirectToAction("LoginPage","User");   //put login page here
             }
 
             return View(user_tbl);
@@ -155,6 +158,14 @@ namespace ComplaintManagementApp.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            //Session.RemoveAll();
+            //Session["userId"] = null;
+
+            return RedirectToAction("LoginPage","User");
         }
 
     }

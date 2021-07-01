@@ -1,12 +1,7 @@
 ﻿@model IEnumerable<ComplaintManagementApp.Complaint_tbl>
 
 
-@{ 
-    ViewBag.Title = "Index";
-    
-
-    
- }
+@{ ViewBag.Title = "Index"; }
 
 
 
@@ -14,7 +9,9 @@
 <br />
 <br />
 <div style="border:dotted thin #ff0000; margin:0 auto; width:90%">
-    
+    <h5>
+        @Html.ActionLink("Create New Complaint", "Create")
+    </h5>
     <table class="table">
         <tr>
             <th>
@@ -38,38 +35,25 @@
 
         @foreach (var item in Model)
         {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Complaint_Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Discription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdateOn)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ComplaintId })|
-            @Html.ActionLink("Details", "Details", new { id = item.ComplaintId })|
-            @Html.ActionLink("Delete", "Delete", new { id = item.ComplaintId })
-
-        </td>
-    </tr>
-}
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Complaint_Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpdateOn)
+                </td>
+            </tr>
+        }
 
 
     </table>
 </div>
-
-
-
-
-
-
-

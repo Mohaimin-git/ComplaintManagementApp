@@ -22,6 +22,11 @@ namespace ComplaintManagementApp.Controllers
             return View(db.Complaint_tbl.ToList());
         }
 
+        public ActionResult UserIndex()
+        {
+            return View(db.Complaint_tbl.ToList());
+        }
+
         // GET: Home/Details/5
         public ActionResult Details(int? id)
         {
@@ -54,7 +59,9 @@ namespace ComplaintManagementApp.Controllers
             {
                 db.Complaint_tbl.Add(complaint_tbl);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                ViewBag.CompSuccess = "Your complaint has been registered successfully";
+                ModelState.Clear();
+                return View();
             }
 
             return View(complaint_tbl);
