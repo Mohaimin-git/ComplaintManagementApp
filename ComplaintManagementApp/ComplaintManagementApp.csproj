@@ -99,6 +99,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <None Include="jquery-1.10.2-vsdoc.js" />
+    <Content Include="images\special-banner-01.png" />
     <Content Include="jquery-1.10.2.js" />
     <Content Include="jquery-1.10.2.min.js" />
     <None Include="jquery.validate-vsdoc.js" />
